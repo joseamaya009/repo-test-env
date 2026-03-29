@@ -1,51 +1,51 @@
 databaseChangeLog:
   - changeSet:
-      id: 8a2e1c10-1111-4fbf-b944-41b54f87bd01
+      id: hu02-0001
       author: josedam2704@gmail.com
-      context: security
-      labels: HU-01
-      comment: Create table roles
+      context: catalog
+      labels: HU-02
+      comment: Create table categories
       changes:
         - tagDatabase:
-            tag: v1.0.0
+            tag: v1.1.0
         - sqlFile:
-            path: 01_tables/0001_create_table_roles.sql
+            path: 01_tables/0004_create_table_categories.sql
             endDelimiter: \nGO
             stripComments: false
       rollback:
         - sqlFile:
-            path: 11_rollbacks/01_tables/0001_create_table_roles.sql
+            path: 11_rollbacks/01_tables/0004_create_table_categories.sql
 
   - changeSet:
-      id: 8a2e1c10-2222-4fbf-b944-41b54f87bd02
+      id: hu02-0002
       author: josedam2704@gmail.com
-      context: security
-      labels: HU-01
-      comment: Create table users
+      context: catalog
+      labels: HU-02
+      comment: Create table products
       changes:
         - tagDatabase:
-            tag: v1.0.1
+            tag: v1.1.1
         - sqlFile:
-            path: 01_tables/0002_create_table_users.sql
+            path: 01_tables/0005_create_table_products.sql
             endDelimiter: \nGO
             stripComments: false
       rollback:
         - sqlFile:
-            path: 11_rollbacks/01_tables/0002_create_table_users.sql
+            path: 11_rollbacks/01_tables/0005_create_table_products.sql
 
   - changeSet:
-      id: 8a2e1c10-3333-4fbf-b944-41b54f87bd03
+      id: hu02-0003
       author: josedam2704@gmail.com
-      context: security
-      labels: HU-01
-      comment: Create table user_roles
+      context: catalog
+      labels: HU-02
+      comment: Create table product_prices
       changes:
         - tagDatabase:
-            tag: v1.0.2
+            tag: v1.1.2
         - sqlFile:
-            path: 01_tables/0003_create_table_user_roles.sql
+            path: 01_tables/0006_create_table_product_prices.sql
             endDelimiter: \nGO
             stripComments: false
       rollback:
         - sqlFile:
-            path: 11_rollbacks/01_tables/0003_create_table_user_roles.sql
+            path: 11_rollbacks/01_tables/0006_create_table_product_prices.sql
