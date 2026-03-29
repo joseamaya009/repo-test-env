@@ -1,0 +1,19 @@
+services:
+  postgres-db:
+    image: postgres:13
+    container_name: cafetin-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: cafetin_user
+      POSTGRES_PASSWORD: cafetin_pass
+      POSTGRES_DB: cafetin_db
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
