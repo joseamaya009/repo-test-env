@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: 8a2e1c10-1111-4fbf-b944-41b54f87bd01
+      author: josedam2704@gmail.com
+      context: security
+      labels: HU-01
+      comment: Create table roles
+      changes:
+        - tagDatabase:
+            tag: v1.0.0
+        - sqlFile:
+            path: 01_tables/0001_create_table_roles.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0001_create_table_roles.sql
+
+  - changeSet:
+      id: 8a2e1c10-2222-4fbf-b944-41b54f87bd02
+      author: josedam2704@gmail.com
+      context: security
+      labels: HU-01
+      comment: Create table users
+      changes:
+        - tagDatabase:
+            tag: v1.0.1
+        - sqlFile:
+            path: 01_tables/0002_create_table_users.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0002_create_table_users.sql
+
+  - changeSet:
+      id: 8a2e1c10-3333-4fbf-b944-41b54f87bd03
+      author: josedam2704@gmail.com
+      context: security
+      labels: HU-01
+      comment: Create table user_roles
+      changes:
+        - tagDatabase:
+            tag: v1.0.2
+        - sqlFile:
+            path: 01_tables/0003_create_table_user_roles.sql
+            endDelimiter: \nGO
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: 11_rollbacks/01_tables/0003_create_table_user_roles.sql
